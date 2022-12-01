@@ -35,8 +35,7 @@ $ python train.py -net res18 -gpu
 The detailed usage is:
 
 ```
-$ train.py [-h] -net NET [-gpu] [-bs BS] [-Epoch EPOCH] [-lr LR] [-wd WD] [-momentum MOMENTUM] [-resize RESIZE]
-                [-num_workers NUM_WORKERS] [-aug] [-path PATH] [-name NAME]
+$ train.py [-h] -net NET [-gpu] [-bs BS] [-Epoch EPOCH] [-lr LR] [-wd WD] [-momentum MOMENTUM] [-resize RESIZE] [-num_workers NUM_WORKERS] [-aug] [-path PATH] [-name NAME]
 
 ```
 The path is where you store your training results, the whole store path will be path/net, name is the file name of the results. Here is one example
@@ -87,8 +86,7 @@ $ python test.py -net res18
 the detailed usage is:
 
 ```
-$ test.py [-h] -net NET [-gpu] [-bs BS] [-resize RESIZE] 
-              [-num_workers NUM_WORKERS] [-path PATH] [-name NAME]
+$ test.py [-h] -net NET [-gpu] [-bs BS] [-resize RESIZE] [-num_workers NUM_WORKERS] [-path PATH] [-name NAME]
 ```
 the usage of path and name are the same as those in train.py. After finish testing, you will get a figure named '{your name}.jpg',
 this is a confusion matrix for your testing result.
@@ -119,7 +117,7 @@ $ python predict.py -net res18 -gpu -image [path-to-image/image-name]
 
 then it will show the prediction results just like this
 
-![image](https://github.com/huangdyu/KMNIST_Classification/blob/main/sample.png)
+![image](https://github.com/huangdyu/KMNIST_Classification/blob/main/Sample.png)
 
 
 
