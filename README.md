@@ -119,7 +119,7 @@ $ python predict.py -net res18 -gpu -image [path-to-image/image-name]
 
 then it will show the prediction results just like this
 
-![image](https://github.com/huangdyu/KMNIST_Classification/blob/main/a.png)
+![image](https://github.com/huangdyu/KMNIST_Classification/blob/main/sample.png)
 
 
 
