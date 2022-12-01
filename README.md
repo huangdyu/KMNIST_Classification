@@ -7,7 +7,7 @@ Doing KMNIST Classification using Pytorch
 After download the codes, you can install the required python packages by running
 
 ```
-pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 ## Usage
@@ -87,7 +87,8 @@ $ python test.py -net res18
 the detailed usage is:
 
 ```
-$ test.py [-h] -net NET [-gpu] [-bs BS] [-resize RESIZE] [-num_workers NUM_WORKERS] [-path PATH] [-name NAME]
+$ test.py [-h] -net NET [-gpu] [-bs BS] [-resize RESIZE] 
+              [-num_workers NUM_WORKERS] [-path PATH] [-name NAME]
 ```
 the usage of path and name are the same as those in train.py. After finish testing, you will get a figure named '{your name}.jpg',
 this is a confusion matrix for your testing result.
@@ -105,8 +106,7 @@ $ python predict.py -net res18 -gpu -all
 the detailed usage is 
 
 ```
-$ predict.py [-h] -net NET [-gpu] [-image IMAGE] [-all] [-bs BS] [-resize RESIZE] [-num_workers NUM_WORKERS]
-                  [-path PATH] [-path_dataset PATH_DATASET] [-name NAME]
+$ predict.py [-h] -net NET [-gpu] [-image IMAGE] [-all] [-bs BS] [-resize RESIZE] [-num_workers NUM_WORKERS] [-path PATH] [-path_dataset PATH_DATASET] [-name NAME]
 ```
 After that, you will get a comfusion matrix image named '{your name}.jpg' in the path you set
 
