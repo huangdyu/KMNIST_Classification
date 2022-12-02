@@ -80,7 +80,7 @@ After you finished training, use args -net to test it on test set, here just use
 
 ```
 #test resnet18 we have just trained before
-$ python test.py -net res18
+$ python test.py -net res18 -gpu
 ```
 
 the detailed usage is:
