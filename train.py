@@ -82,7 +82,7 @@ if __name__ == '__main__':
 
     ## training 
     if args.gpu:
-        print(f'training on {torch.cuda.get_device_name()}')
+        print(f'-------training on {torch.cuda.get_device_name()}-------')
     
 
     for epoch in range(args.Epoch):
