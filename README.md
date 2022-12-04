@@ -110,7 +110,8 @@ $ python train.py -net res18 -gpu
 The detailed usage is:
 
 ```
-$ train.py [-h] -net NET [-gpu] [-bs BS] [-Epoch EPOCH] [-lr LR] [-wd WD] [-momentum MOMENTUM] [-resize RESIZE] [-num_workers NUM_WORKERS] [-aug] [-path PATH] [-name NAME]
+$ train.py [-h] -net NET [-gpu] [-bs BS] [-Epoch EPOCH] [-lr LR] [-wd WD] [-momentum MOMENTUM] [-resize RESIZE]
+           [-num_workers NUM_WORKERS] [-aug] [-path PATH] [-name NAME]
 
 ```
 The path is where you store your training results, the whole store path will be path/net, name is the file name of the results. Here is one example
@@ -151,17 +152,24 @@ Current available networks are:(to be countinued)
 
 ### 4. test
 
-After you finished training, use args -net to test it on test set, here just use the test set again.
+After you finished training, use args -net to test it on test set, here just use the test set again. There are two choices for your testing, the first is just use the test set again or use the revised test set. In my code, we add gaussian blur to the test set. For the first choice, just run as 
 
 ```
 #test resnet18 we have just trained before
-$ python test.py -net res18 -gpu
+$ python test.py -net res18 -gpu 
+```
+
+For the second choice, just run as 
+
+```
+$ python test.py -net res18 -gpu -aug
 ```
 
 the detailed usage is:
 
 ```
-$ test.py [-h] -net NET [-gpu] [-bs BS] [-resize RESIZE] [-num_workers NUM_WORKERS] [-path PATH] [-name NAME]
+$ test.py [-h] -net NET [-gpu] [-bs BS] [-resize RESIZE] [-num_workers NUM_WORKERS]
+          [-path PATH] [-aug] [-name1 NAME1] [-name2 NAME2]
 ```
 the usage of path and name are the same as those in train.py. After finish testing, you will get a figure named '{your name}.jpg',
 this is a confusion matrix for your testing result.
@@ -179,7 +187,8 @@ $ python predict.py -net res18 -gpu -all
 the detailed usage is 
 
 ```
-$ predict.py [-h] -net NET [-gpu] [-image IMAGE] [-all] [-bs BS] [-resize RESIZE] [-num_workers NUM_WORKERS] [-path PATH] [-path_dataset PATH_DATASET] [-name NAME]
+$ predict.py predict.py [-h] -net NET [-gpu] [-image IMAGE] [-all] [-bs BS] [-resize RESIZE] [-num_workers NUM_WORKERS]
+                        [-path PATH] [-path_dataset PATH_DATASET] [-name1 NAME1] [-aug]
 ```
 After that, you will get a comfusion matrix image named '{your name}.jpg' in the path you set
 
