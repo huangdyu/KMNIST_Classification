@@ -36,7 +36,8 @@ if __name__ == '__main__':
     parser.add_argument('-num_workers', type = int, default = 4, help = 'number of workers for dataloader')
     parser.add_argument('-path', type = str, default = './runs', help = 'the path to save the results')
     parser.add_argument('-path_dataset', type = str, default = './MyDataset', help = 'the path to your datasets')
-    parser.add_argument('-name', type = str ,default = 'predict.jpg', help = 'the file name to sava the fig result')
+    parser.add_argument('-name1', type = str ,default = 'predict.jpg', help = 'the file name to sava the fig result')
+    parser.add_argument('-aug', action = 'store_false', default = False, help = 'no use, please not change it')
     args = parser.parse_args()
 
     net = get_model(args)
@@ -92,11 +93,9 @@ if __name__ == '__main__':
         with torch.no_grad():
             predict = get_label(net(image).argmax())
         
-        print(net(image).argmax())
-        '''
         plt.imshow(image_show , vmin = 0, vmax = 1, cmap = 'gray')
         plt.xlabel(f'predict: {predict}')
         plt.xticks([])
         plt.yticks([])
         plt.show()
-    '''
+    
