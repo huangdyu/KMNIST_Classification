@@ -1,3 +1,69 @@
+# KMNIST_Cluster
+
+Do clustering on images without labels, and then evaluate the clustering result by criterion NMI (Normalized Mutual Information) and ARI (Adjusted Rand Index).
+
+## Requirements for package
+
+After download the codes, you can install the required python packages by running
+
+```
+$ pip install -r requirements.txt
+```
+
+## Usage
+
+### 1. Dataset
+
+As the title mentioned, this is for KMNIST(10 classes), for more details about this dataset, please refer to 
+
+<https://github.com/rois-codh/kmnist>
+
+### 2. Convert the ubyte file to images and import them
+```
+    # Here is the original dataset location
+    train_images = 'THE ORIGINAL DATASET LOCATION'
+    train_labels = 'THE ORIGINAL DATASET LOCATION' # only import it, but do not use it
+    test_images = 'THE ORIGINAL DATASET LOCATION' # only import it, but do not use it
+    test_labels = 'THE ORIGINAL DATASET LOCATION' # only import it, but do not use it
+    
+    # Here is the converted dataset location
+    save_train = 'THE CONVERTED DATASET LOCATION'
+    save_test = 'THE CONVERTED DATASET LOCATION'
+```
+
+### 3. Principal component analysis
+
+Before clustering, reduce the dimension of the giant matrix. You can see the variance contribution rate of PCA.
+
+### 4. K-means clustering
+
+You can try clustering on the matrix after PCA by
+
+```
+# cluster on the matrix after PCA
+km.fit(pca.transform(A))
+```
+
+Of course, you can try clustering on the original matrix by
+
+```
+# cluster on the original matrix
+km.fit(X_reshape)
+```
+
+### 5. Save the result of the clustering
+#### (a) Create a specific file
+#### (b) Change the path you want to save
+The core code is:
+
+```
+image1.save('THE PATH YOU WANT TO SAVE' + 'cluster1_' + str(j + 1) + '.jpg')
+```
+
+### 6. Calculate ARI and NMI of the clustering result
+
+Calculate ARI and NMI of the clustering result under different dimensions after PCA and plot line charts. Obtain the best dimension after PCA dimension reduction.
+
 # KMNIST_Classification
 
 Doing KMNIST Classification using Pytorch
