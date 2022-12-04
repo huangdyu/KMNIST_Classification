@@ -60,6 +60,9 @@ The core code is:
 image1.save('THE PATH YOU WANT TO SAVE' + 'cluster1_' + str(j + 1) + '.jpg')
 ```
 
+Here is the figure for one of the folder 
+![image] (https://github.com/huangdyu/KMNIST_Classification/blob/main/sample1.png)
+
 ### 6. Calculate ARI and NMI of the clustering result
 
 Calculate ARI and NMI of the clustering result under different dimensions after PCA and plot line charts. Obtain the best dimension after PCA dimension reduction.
