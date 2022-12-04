@@ -4,7 +4,7 @@ Do clustering on images without labels, and then evaluate the clustering result 
 
 ## Requirements for package
 
-After download the codes, you can install the required python packages by running
+After download the codes, you can install the required python packages by running (note that it is different of the same-name txt file for classification)
 
 ```
 $ pip install -r requirements.txt
