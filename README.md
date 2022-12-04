@@ -71,6 +71,12 @@ Calculate ARI and NMI of the clustering result under different dimensions after 
 
 Doing KMNIST Classification using Pytorch
 
+```
+metrics.adjusted_rand_score(truelabels, km.labels_)  #ARI
+metrics.normalized_mutual_info_score(truelabels, km.labels_)   #NMI
+```
+where truelabels are the original labels of the images and km.labels_ are the labels of our clustering.
+
 ## Requirements for package
 
 After download the codes, you can install the required python packages by running
