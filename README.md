@@ -67,15 +67,15 @@ Here is the figure for one of the folder
 
 Calculate ARI and NMI of the clustering result under different dimensions after PCA and plot line charts. Obtain the best dimension after PCA dimension reduction.
 
-# KMNIST_Classification
-
-Doing KMNIST Classification using Pytorch
-
 ```
 metrics.adjusted_rand_score(truelabels, km.labels_)  #ARI
 metrics.normalized_mutual_info_score(truelabels, km.labels_)   #NMI
 ```
 where truelabels are the original labels of the images and km.labels_ are the labels of our clustering.
+
+# KMNIST_Classification
+
+Doing KMNIST Classification using Pytorch
 
 ## Requirements for package
 
